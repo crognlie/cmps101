@@ -1,0 +1,34 @@
+README
+
+CMPS 101 pa5
+Colin Rognlie
+colin@crcon.net | reflex@cats.ucsc.edu
+
+File list:
+
+README
+	This README
+Graph.c
+Graph.h
+	Source and Header for Graph data structure
+GraphClient.c
+	Test Client for Graph data structure
+List.c
+List.h
+	Source and Header for List data structure
+ListClient.c
+	Test Client for List data structure
+MST.c
+	Minimum weight spanning tree application
+Makefile
+	Makefile for compiling/linking
+PriorityQueue.c
+PriorityQueue.h
+	Source and Header for Priority Queue data structure
+PriorityQueueClient.c
+	Test Client for Priority Queue data structure
+
+Notes:
+	List and PriorityQueue are completed.  Graph is completed except for
+	copyGraph() and GraphClient (doesn't test Prim()), and I haven't made
+	MST.  (I had to leave town for a funeral =[ )

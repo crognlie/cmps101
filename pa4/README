@@ -1,0 +1,73 @@
+README
+
+CMPS 101 pa4
+Colin Rognlie
+colin@crcon.net | reflex@cats.ucsc.edu
+
+File list:
+
+README
+	This README file
+Makefile
+	Makefile for project
+FindComponents.c
+	Application to print the adjacency list and strongly connected components of a graph
+Graph.c
+	ANSI C implementation of a graph ADT
+Graph.h
+	Header for Graph's exported data structures and functions
+GraphClient.c
+	Test driver for Graph implementation (output to 'out_file')
+List.c
+	ANSI C implementation of the doubly linked list ADT
+List.h
+	Header for List's exported data structures and functions
+ListClient.c
+	Source for a test driver for the List implementation
+
+Notes:
+	Attribution: The file I/O code is directly based on the instructor's fileio.c example.
+	The List files are almost directly from my pa2 assignment.  The makefile is directly
+	from the pa4 handout.
+
+	In my files, tabs are equivalent to two spaces.
+
+	The test driver for the Graph ADT, GraphClient, uses the graph from the handout for
+	it's test, the output (to "out_file") should look as follows:
+-----
+Adjacency list representation of G:
+1: 2
+2: 3 5 6
+3: 4 7
+4: 3 8
+5: 1 6
+6: 7
+7: 6 8
+8: 8
+
+G contains 4 strongly connected components:
+Component 1: 1 2 5
+Component 2: 3 4
+Component 3: 6 7
+Component 4: 8
+-----
+	This is the same as running the FindComponents application with the input file from the
+	handout:
+-----
+8 
+1 2 
+2 3 
+2 5 
+2 6 
+3 4 
+3 7 
+4 3 
+4 8 
+5 1 
+5 6 
+6 7 
+7 6 
+7 8 
+8 8 
+0 0 
+-----

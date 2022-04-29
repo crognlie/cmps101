@@ -1,0 +1,48 @@
+README
+
+CMPS 101 pa1
+Colin Rognlie
+colin@crcon.net | reflex@cats.ucsc.edu
+
+File List:
+
+README
+	This README file
+List.class
+	A Java implementation of the doubly linked list ADT
+Shuffle.class
+	A program that calculates the number of card shuffles that returns to the
+	initial state of a deck.  Requires List.class.
+
+Notes:
+
+	In List I have included the optional methods cat() and makeEmpty(), and they
+	are also tested in the test driver in main().  My tests do not include any
+	print statements, the tests are all conducted using List methods, and give
+	exceptions (and exit) if the test fails.  This allows a greater degree of
+	precision than I'd be able to quickly see by eye.  I've probably tested more
+	thoroughly than is necessary.  The integer 'num' in main() is used throughout
+	testing as (usually) half the number of nodes in the list to create, and all
+	tests work for any num > 1.
+	
+	In Shuffle, I have assumed the intent of the creation of an instance of the
+	class Shuffle is to calculate and print the number of shuffles necessary to
+	return the deck to it's initial state.  Therefore, main() creates an
+	anonymous instance of Shuffle using the constructor, with an argument of the
+	number of cards to use.  The constructor Shuffle() contains the initialization
+	of data, as well as the calls to deckShuffle and the printing of output.
+	deckShuffle() is the implementation of the shuffling algorithm as specified in
+	the assignment.
+	
+	In my files, tabs are equivalent to two spaces.
+	
+	I used the following shell script for testing:
+		#!/bin/sh
+		rm List*.class Shuffle*.class
+		javac List.java; javac Shuffle.java
+		java List
+		echo
+		for int in 9 14 500 508 511
+		do java Shuffle $int; done
+		echo "Desired: 6, 4, 166, 508, 9"
+		

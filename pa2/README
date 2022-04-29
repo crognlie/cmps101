@@ -1,0 +1,43 @@
+README
+
+CMPS 101 pa2
+Colin Rognlie
+colin@crcon.net | reflex@cats.ucsc.edu
+
+File list:
+
+README
+	This README file
+Makefile
+	Makefile for List.o, ListClient(.o), and Shuffle(.o)
+List.c
+	ANSI C implementation of the doubly linked list ADT
+List.h
+	Header for List's exported data structures and functions
+ListClient.c
+	Source for a test driver for the List implementation
+Shuffle.c
+	An application that calculates the number of card shuffles required to return
+	to the initial state of a deck. Requires List.h.
+
+Notes:
+	I've implemented the optional functions cat() and makeEmpty(), and they're
+	tested in the test driver in main(). My tests do not include any print
+	statements, the tests are all conducted using List methods, and print error
+	messages and exit if the test fails. This allows a greater degree of precision
+	than I'd be able to quickly see by eye. I've probably tested more thoroughly
+	than is necessary. TESTNODES in ListClient.c is used throughout testing as the
+	number of nodes in the test lists to create.
+
+	In my files, tabs are equivalent to two spaces.
+
+	I used the following shell script for testing:
+		#!/bin/sh
+		make clean
+		make ListClient
+		./ListClient
+		make Shuffle
+		for int in 9 14 500 508 511
+		do ./Shuffle $int; done
+		echo "Desired: 6, 4, 166, 508, 9"
+
